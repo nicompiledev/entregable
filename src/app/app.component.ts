@@ -7,23 +7,23 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'LavaSoft';
-  modalRef?: BsModalRef;
-  disabledDates: Date[] = [];
+  // title = 'LavaSoft';
+  // modalRef?: BsModalRef;
+  // disabledDates: Date[] = [];
 
-  constructor(private modalService: BsModalService) {
-    const currentDate = new Date();
-    const currentDateTime = new Date();
-    currentDateTime.setHours(currentDate.getHours());
-    currentDateTime.setMinutes(currentDate.getMinutes());
-    this.disabledDates.push(currentDateTime);
-  }
+  // constructor(private modalService: BsModalService) {
+  //   const currentDate = new Date();
+  //   const currentDateTime = new Date();
+  //   currentDateTime.setHours(currentDate.getHours());
+  //   currentDateTime.setMinutes(currentDate.getMinutes());
+  //   this.disabledDates.push(currentDateTime);
+  // }
 
-  openModal(template: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(template);
-  }
+  // openModal(template: TemplateRef<any>) {
+  //   this.modalRef = this.modalService.show(template);
+  // }
 
-  onValueChange(value: Date): void {
-    console.log('onValueChange: ', value);
-  }
+  // onValueChange(value: Date): void {
+  //   console.log('onValueChange: ', value);
+  // }
 }

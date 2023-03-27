@@ -1,0 +1,44 @@
+
+<hr>
+<button type="button" class="btn btn-primary" (click)="openModal(modal)">Agendar</button>
+
+<ng-template #modal>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Agendar: </h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <h2>Selecciona fecha y hora para tu servicio.</h2>
+    <app-choose-service></app-choose-service>
+    <br>
+
+    <div class="row">
+      <div class="col-xs-12 col-12 col-md-4 form-group">
+        <input type="text"
+               placeholder="Selecciona fecha y hora..."
+               class="form-control"
+               [bsConfig]="{withTimepicker: true,
+                            rangeInputFormat: 'MMMM Do YYYY, h:mm:ss a',
+                            dateInputFormat: 'MMMM Do YYYY, h:mm:ss a',
+                            containerClass: 'theme-dark-blue',
+                            showClearButton: true,
+                            clearPosition: 'right',
+                            showTodayButton: true,
+                            todayPosition: 'left',
+                            minDate: disabledDates[0],
+                            maxDate: disabledDates[1],
+                            showWeekNumbers: false}"
+               [datesDisabled]="disabledDates"
+               triggers="mouseenter:click"
+               bsDatepicker
+               (bsValueChange)="onValueChange($event)"
+               >
+      </div>
+    </div>
+
+  </div>
+
+</ng-template>
+

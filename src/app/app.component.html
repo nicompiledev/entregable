@@ -1,47 +1,8 @@
-<h1>LavaSoft</h1>
-<button type="button" class="btn btn-primary"
-        [tooltip]="tooltip"
-        triggers="click"
-        container="body"
-        placement="top">
-  Simple demo
-</button>
-<ng-template #tooltip>Welcome to {{title}}</ng-template>
-<hr>
-<button type="button" class="btn btn-primary" (click)="openModal(modal)">Create template modal</button>
-
-<ng-template #modal>
-  <div class="modal-header">
-    <h4 class="modal-title pull-left">Modal</h4>
-    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
-      <span aria-hidden="true" class="visually-hidden">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <h2>Selecciona fecha y hora.</h2>
-    <br>
-    <div class="row">
-      <div class="col-xs-12 col-12 col-md-4 form-group">
-        <input type="text"
-               placeholder="Datepicker"
-               class="form-control"
-               [bsConfig]="{withTimepicker: true,
-                            rangeInputFormat: 'MMMM Do YYYY, h:mm:ss a',
-                            dateInputFormat: 'MMMM Do YYYY, h:mm:ss a',
-                            containerClass: 'theme-dark-blue',
-                            showClearButton: true,
-                            clearPosition: 'right',
-                            showTodayButton: true,
-                            todayPosition: 'left',
-                            minDate: disabledDates[0],
-                            maxDate: disabledDates[1],
-                            showWeekNumbers: false}"
-               [datesDisabled]="disabledDates"
-               triggers="mouseenter:click"
-               bsDatepicker
-               (bsValueChange)="onValueChange($event)"
-               >
-      </div>
-    </div>
-  </div>
-</ng-template>
+<!-- <app-test> </app-test> -->
+<app-header></app-header>
+<app-home></app-home>
+<app-about></app-about>
+<app-cars></app-cars>
+<app-parts></app-parts>
+<app-blog></app-blog>
+<app-footer></app-footer>
