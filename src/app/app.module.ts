@@ -19,6 +19,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { PartsComponent } from './pages/parts/parts.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { FooterComponent } from './pages/footer/footer.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 
@@ -36,7 +37,9 @@ import { FooterComponent } from './pages/footer/footer.component';
     AboutComponent,
     PartsComponent,
     BlogComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    
 
 
   ],

@@ -86,7 +86,12 @@
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "node_modules/boxicons",
+                "output": "/assets/icons"
+              }
             ],
             "styles": [
               "src/styles.css"

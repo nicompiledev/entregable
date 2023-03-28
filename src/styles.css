@@ -113,11 +113,34 @@ header.shadow #search-icon {
   border-bottom: 3px solid var(--main-color);
 }
 
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+#login-icon {
+  font-size: 24px;
+  cursor: pointer;
+  border: none; /* Remueve el borde */
+  background: none; /* Remueve el fondo */
+}
+
+#register-icon {
+  font-size: 24px;
+  cursor: pointer;
+  border: none; /* Remueve el borde */
+  background: none; /* Remueve el fondo */
+}
+
 #search-icon {
   font-size: 24px;
   cursor: pointer;
-  color: var(--bg-color);
+  color: var(--text-color);
 }
+
+
+
 
 .search-box {
   position: absolute;
