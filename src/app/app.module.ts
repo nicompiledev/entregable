@@ -5,10 +5,16 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { RatingModule } from 'ngx-bootstrap/rating';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatInputModule} from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+
+
+
+
 import { ChooseServiceComponent } from './components/choose-service/choose-service.component';
 import { RatingComponent } from './components/rating/rating.component';
 import { TestComponent } from './components/test/test.component';
@@ -20,6 +26,8 @@ import { PartsComponent } from './pages/parts/parts.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
+
+
 
 
 
@@ -38,8 +46,8 @@ import { LoginComponent } from './components/login/login.component';
     PartsComponent,
     BlogComponent,
     FooterComponent,
-    LoginComponent,
-    
+    LoginComponent
+
 
 
   ],
@@ -47,13 +55,17 @@ import { LoginComponent } from './components/login/login.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
     BsDatepickerModule.forRoot(),
     AccordionModule.forRoot(),
     RatingModule.forRoot(),
+    MatInputModule,
+    MatIconModule,
 
     BrowserAnimationsModule,
+    
 
   ],
   providers: [],

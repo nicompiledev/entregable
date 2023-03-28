@@ -11,6 +11,7 @@ export class TestComponent {
   title = 'LavaSoft';
   modalRef?: BsModalRef;
   disabledDates: Date[] = [];
+  
 
   constructor(private modalService: BsModalService) {
     const currentDate = new Date();

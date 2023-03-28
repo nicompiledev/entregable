@@ -152,6 +152,10 @@ button {
   border: 1px solid var(--main-color);
   border-radius: 0.5rem;
   clip-path: circle(0% at 100% 0%);
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
 }
 
 .search-box.active {
@@ -590,3 +594,6 @@ button {
     display: contents;
   }
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

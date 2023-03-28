@@ -19,6 +19,7 @@ export class CarsComponent {
   part4 = 'assets/img/part4.png';
   part5 = 'assets/img/part5.png';
   part6 = 'assets/img/part6.png';
+  lavadero = 'assets/img/philipp-katzenberger-_DSom3ySpow-unsplash.jpg';
 
 
 }
