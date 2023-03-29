@@ -1,0 +1,45 @@
+<form [formGroup]="usuarioForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="nombre">Nombre</label>
+    <input type="text" class="form-control" id="nombre" formControlName="nombre">
+    <div *ngIf="usuarioForm.get('nombre').invalid && usuarioForm.get('nombre').dirty" class="text-danger">
+      <div *ngIf="usuarioForm.get('nombre').hasError('required')">Este campo es requerido</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="nombre">Apellido</label>
+    <input type="text" class="form-control" id="apellido" formControlName="apellido">
+    <div *ngIf="usuarioForm.get('apellido').invalid && usuarioForm.get('apellido').dirty" class="text-danger">
+      <div *ngIf="usuarioForm.get('apellido').hasError('required')">Este campo es requerido</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="email">Correo electrónico</label>
+    <input type="email" class="form-control" id="correo_electronico" formControlName="correo_electronico">
+    <div *ngIf="usuarioForm.get('correo_electronico').invalid && usuarioForm.get('correo_electronico').dirty" class="text-danger">
+      <div *ngIf="usuarioForm.get('correo_electronico').hasError('required')">Este campo es requerido</div>
+      <div *ngIf="usuarioForm.get('correo_electronico').hasError('email')">El correo electrónico no es válido</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="contrasena">Contraseña</label>
+    <input type="password" class="form-control" id="contrasena" formControlName="contrasena">
+    <div *ngIf="usuarioForm.get('contrasena').invalid && usuarioForm.get('contrasena').dirty" class="text-danger">
+      <div *ngIf="usuarioForm.get('contrasena').hasError('required')">Este campo es requerido</div>
+      <div *ngIf="usuarioForm.get('contrasena').hasError('minlength')">La contraseña debe tener al menos 8 caracteres</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="telefono">Teléfono</label>
+    <input type="tel" class="form-control" id="telefono" formControlName="telefono">
+    <div *ngIf="usuarioForm.get('telefono').invalid && usuarioForm.get('telefono').dirty" class="text-danger">
+      <div *ngIf="usuarioForm.get('telefono').hasError('required')">Este campo es requerido</div>
+      <div *ngIf="usuarioForm.get('telefono').hasError('minlength')">El número de teléfono debe tener 10 dígitos</div>
+      <div *ngIf="usuarioForm.get('telefono').hasError('maxlength')">El número de teléfono debe tener 10 dígitos</div>
+    </div>
+  </div>
+  <!-- Iniciar sesión texto router -->
+  <p>¿Ya tienes una cuenta? <a routerLink="">Inicia sesión</a></p>
+  <button type="submit" class="btn btn-primary" [disabled]="!usuarioForm.valid">Registrar</button>
+  <p *ngIf="mensajeError" class="error-msg">{{ mensajeError }}</p> <!-- mostrar mensaje de error -->
+</form>
