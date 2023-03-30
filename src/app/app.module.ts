@@ -13,14 +13,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 
-import { RegistrarComponent } from './components/usuario/registrar/registrar.component';
-import { ConfirmarCuentaComponent } from './components/usuario/confirmar-cuenta/confirmar-cuenta.component';
-import { LoginComponent } from './components/usuario/login/login.component';
-import { RecuperarContrasenaComponent } from './components/usuario/recuperar-contrasena/recuperar-contrasena.component';
-import { NuevaContrasenaComponent } from './components/usuario/nueva-contrasena/nueva-contrasena.component';
-import { PerfilComponent } from './components/usuario/perfil/perfil.component';
-import { ActualizarPerfilComponent } from './components/usuario/actualizar-perfil/actualizar-perfil.component';
-import { ActualizarPasswordComponent } from './components/usuario/actualizar-password/actualizar-password.component';
 
 
 
@@ -35,6 +27,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { PartsComponent } from './pages/parts/parts.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { FooterComponent } from './pages/footer/footer.component';
+import { RegisterComponent } from './components/register/register.component';
+
 
 
 
@@ -56,14 +50,8 @@ import { FooterComponent } from './pages/footer/footer.component';
     PartsComponent,
     BlogComponent,
     FooterComponent,
-    RegistrarComponent,
-    ConfirmarCuentaComponent,
-    LoginComponent,
-    RecuperarContrasenaComponent,
-    NuevaContrasenaComponent,
-    PerfilComponent,
-    ActualizarPerfilComponent,
-    ActualizarPasswordComponent
+    RegisterComponent
+
 
 
   ],
