@@ -13,70 +13,40 @@
           <li><a href="#parts">Precios</a></li>
           <li><a href="#blog">Nuestros Socios</a></li>
       </ul>
-      <button type="button" title="inicio" (click)="openModal(template)">
-        <i class='bx bx-log-in' id="login-icon"></i>
+      <button type="button" title="inicio" (click)="openModal(login)">
+        <i class='bx bx-log-in' id="login-icon" style="color: cadetblue;"></i>
+      </button>
+      <button title="inicio"(click)="openModal(singup)">
+        <i class='bx bx-user-plus' id="register-icon" style="color: cadetblue;"></i>
       </button>
 
-      <button title="inicio"(click)="openModal(template)">
-        <i class='bx bx-user-plus' id="register-icon"></i>
-      </button>
-
-
-      <ng-template #template>
+     <<ng-template #login>
         <div class="modal-header">
-          <h4 class="modal-title pull-left">Modal Inicio/Registro</h4>
+          <h4 class="modal-title pull-left">Iniciar Sesion</h4>
           <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
             <span aria-hidden="true" class="visually-hidden">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          Aqui va el formulario de inicio de sesion y registro
 
-          <app-register></app-register>
-
-
-
-          <!-- <div class="mt-20 md:mt-5 px-5 py-10 rounded-xl bg-white">
-            <form>
-              <div class="my-5"><label class="uppercase text-gray-600 block text-xl font-bold">Email</label><input type="email"
-                  placeholder="Email de Registro" class="border w-full p-3 mt-3 bg-gray-50 rounded-xl" value=""></div>
-              <div class="my-5"><label class="uppercase text-gray-600 block text-xl font-bold">Password</label><input
-                  type="password" placeholder="Tu Password" class="border w-full p-3 mt-3 bg-gray-50 rounded-xl" value=""></div>
-              <input type="submit"
-                class="bg-indigo-700 w-full py-3 px-10 rounded-xl text-white uppercase font-bold mt-5 hover:cursor-pointer hover:bg-indigo-800 md:w-auto "
-                value="Iniciar Sesión">
-            </form>
-            <nav class="mt-10 lg:flex lg:justify-between"><a class="block text-center my-5 text-gray-500" href="/registrar">¿No
-                tienes una cuenta? Regístrate</a><a class="block text-center my-5 text-gray-500" href="/olvide-password">Olvide mi
-                Password</a></nav>
-          </div> -->
-          <!-- <form class="example-form" style="display: flex; flex-direction: column;">
-            <mat-form-field class="example-full-width" style="margin-bottom: 16px;">
-              <mat-label>Email</mat-label>
-              <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
-                     placeholder="Ex. pat@example.com">
-              <mat-hint>Errors appear instantly!</mat-hint>
-              <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-                Please enter a valid email address
-              </mat-error>
-              <mat-error *ngIf="emailFormControl.hasError('required')">
-                Email is <strong>required</strong>
-              </mat-error>
-            </mat-form-field>
-            <mat-form-field appearance="fill" style="margin-bottom: 16px;">
-              <mat-label>Enter your password</mat-label>
-              <input matInput [type]="hide ? 'password' : 'text'">
-              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-              </button>
-
-            </mat-form-field>
-            <button type="button" class="btn btn-primary">Enviar</button>
-          </form> -->
-
-
+          <app-login-test></app-login-test>
         </div>
       </ng-template>
+     <<ng-template #singup>
+      <div class="modal-header">
+        <h4 class="modal-title pull-left" style="margin: 0px;">Registro</h4>
+        <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+          <span aria-hidden="true" class="visually-hidden">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <app-signup> </app-signup>
+      </div>
+     </ng-template>
+
+
+
 
 
 
